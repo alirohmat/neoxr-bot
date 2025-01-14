@@ -59,3 +59,14 @@ CFonts.say('NEOXR BOT', {
    font: 'console',
    align: 'center'
 }), start()
+//port 8000
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Server is running on port 8000\n');
+});
+
+server.listen(8000, '0.0.0.0', () => {
+  console.log('Server is listening on port 8000');
+});
